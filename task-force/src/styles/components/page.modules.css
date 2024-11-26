@@ -1,0 +1,88 @@
+/* src/styles/components/page.modules.css */
+
+/* Fade In Up Animation */
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Fade-In and Zoom Effect for Result */
+@keyframes fadeInZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.result-message {
+  padding: 30px;
+  background-color: rgba(31, 41, 55, 0.9);
+  border-radius: 10px;
+  text-align: center;
+  animation: fadeInZoom 1s ease-out;
+}
+
+@media (max-width: 768px) {
+  .result-message {
+    padding: 15px;
+  }
+  
+}
+
+.result-message h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .result-message h2 {
+    font-size: 1.5rem;
+  }
+  
+}
+
+.result-message p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #ffffff;
+}
+
+.result-buttons {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+  animation: fadeInZoom 1s ease-out;
+}
+
+/* Button Hover Effect */
+.result-buttons button:hover {
+  transform: scale(1.05);
+  transition: 0.2s ease-in-out;
+}
+
+/* Fade-in Effect for the Quiz Card */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.quiz-section {
+  animation: fadeIn 1s ease-out;
+}
